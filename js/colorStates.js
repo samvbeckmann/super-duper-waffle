@@ -19,4 +19,3 @@ states.on("mouseout", function(d) {
     return 1.0;
   });
 });
-ß
