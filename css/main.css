@@ -16,3 +16,25 @@
 .x.axis path {
   display: none;
 }
+
+h1 {
+  font-size: 60px;
+  font-family: "Righteous" cursive;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+p {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 20px;
+}
+
+.tagline {
+  font-style: italic;
+  font-size: 28px;
+  text-align: center;
+}
+
+svg {
+  text-align: center;
+}
