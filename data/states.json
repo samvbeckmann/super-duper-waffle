@@ -52,5 +52,3 @@
         {"name": "Wyoming", "votes": 3}
     ]
 }
-
-for name, votes in string.gmatch(rawr, "%.php\"%>([%a%s]+)%<%/a%>.-\"%>(%d+)%<%/td%>") do                     elecs[name] = votes                                                             keys[#keys + 1] = name end
