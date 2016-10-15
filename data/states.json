@@ -1,6 +1,6 @@
 {
     "states": [
-        {"name": "Alabama", "votes": 9, "trump": 56.4, "clinton": 36.8, "undecided": 6.9},
+        {"name": "Alabama", "votes": 9},
         {"name": "Alaska", "votes": 3},
         {"name": "Arizona", "votes": 11},
         {"name": "Arkansas", "votes": 6},
@@ -28,17 +28,29 @@
         {"name": "Montana", "votes": 3},
         {"name": "Nebraska", "votes": 5},
         {"name": "Nevada", "votes": 6},
+        {"name": "New Hampshire", "votes": 4},
+        {"name": "New Jersey", "votes": 14},
+        {"name": "New Mexico", "votes": 5},
+        {"name": "New York", "votes": 29},
+        {"name": "North Carolina", "votes": 15},
+        {"name": "North Dakota", "votes": 3},
         {"name": "Ohio", "votes": 18},
         {"name": "Oklahoma", "votes": 7},
         {"name": "Oregon", "votes": 7},
         {"name": "Pennsylvania", "votes": 20},
+        {"name": "Rhode Island", "votes": 4},
+        {"name": "South Carolina", "votes": 9},
+        {"name": "South Dakota", "votes": 3},
         {"name": "Tennessee", "votes": 11},
         {"name": "Texas", "votes": 38},
         {"name": "Utah", "votes": 6},
         {"name": "Vermont", "votes": 3},
         {"name": "Virginia", "votes": 13},
         {"name": "Washington", "votes": 12},
+        {"name": "West Virginia", "votes": 5},
         {"name": "Wisconsin", "votes": 10},
         {"name": "Wyoming", "votes": 3}
     ]
 }
+
+for name, votes in string.gmatch(rawr, "%.php\"%>([%a%s]+)%<%/a%>.-\"%>(%d+)%<%/td%>") do                     elecs[name] = votes                                                             keys[#keys + 1] = name end
