@@ -1,12 +1,12 @@
-
+, "trump": 0.564, "clinton": .368, "undecided": 0.069
 , "trump": 0.379, "clinton": 0.313, "johnson": 0.159, "undecided": 0.119, "other": 0.03
 , "trump": 0.437, "clinton": 0.404, "other": 0.08, "undecided": 0.079
 , "trump": 0.499, "clinton": 0.36, "undecided": 0.072, "other": 0.069
-
+, "trump": 0.304, "clinton": 0.543, "undecided": 0.055, "other": 0.098
 , "clinton": 0.422, "trump": 0.383, "johnson": 0.091, "other": 0.063, "undecided": 0.04
 , "clinton": 0.472, "trump": 0.362, "undecided": 0.123, "other": 0.043
 , "clinton": 0.479, "trump": 0.339, "undecided": 0.107, "other": 0.075
-
+, "clinton": 0.462, "trump": 0.425, "johnson": 0.049, "undecided": 0.054, "other": 0.011
 , "trump": 0.453, "clinton": 0.414, "other": 0.084, "undecided": 0.048
 , "clinton": 0.58, "trump": 0.28, "undecided": 0.14
 , "trump": 0.505, "clinton": 0.279, "other": 0.112, "undecided": 0.104
