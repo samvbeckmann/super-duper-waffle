@@ -1,54 +1,50 @@
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
-, "turnout": 
+, "turnout": 2305000
+, "turnout": 319000
+, "turnout": 2866000
+, "turnout": 1200000
+, "turnout": 14665000
+, "turnout": 2733000
+, "turnout": 1667000
+, "turnout": 473000
+, "turnout": 9129000
+, "turnout": 4757000
+, "turnout": 521000
+, "turnout": 731000
+, "turnout": 5780000
+, "turnout": 2936000
+, "turnout": 1642000
+, "turnout": 1280000
+, "turnout": 2100000
+, "turnout": 2237000
+, "turnout": 747000
+, "turnout": 2838000
+, "turnout": 3540000
+, "turnout": 5195000
+, "turnout": 3103000
+, "turnout": 1694000
+, "turnout": 3016000
+, "turnout": 513000
+, "turnout": 860000
+, "turnout": 1237000
+, "turnout": 776000
+, "turnout": 3855000
+, "turnout": 977000
+, "turnout": 8027000
+, "turnout": 5154000
+, "turnout": 338000
+, "turnout": 5748000
+, "turnout": 1512000
+, "turnout": 2074000
+, "turnout": 6223000
+, "turnout": 503000
+, "turnout": 2415000
+, "turnout": 401000
+, "turnout": 2735000
+, "turnout": 9537000
+, "turnout": 1126000
+, "turnout": 331000
+, "turnout": 4060000
+, "turnout": 3417000
+, "turnout": 723000
+, "turnout": 3352000
+, "turnout": 258000

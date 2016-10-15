@@ -6,7 +6,6 @@
 , "turnout": 2308
 , "turnout": 1610
 , "turnout": 408
-, "turnout": 306
 , "turnout": 7951
 , "turnout": 4183
 , "turnout": 457
