@@ -35,15 +35,15 @@ d3.json("data/states.json", function(error, data) {
       .data(data.states)
       .enter();
 
-  circle.append("circle")
+  var cir = circle.append("circle")
       .attr("r", 8)
       .attr("cy", 10)
+      .attr("fill", function(d, i) {
+        return color(data.states[i].score);
+      })
       .attr("cx", function(d, i) { return xCircleOffset(data.states[i].rank); })
       .attr("id", function(d, i) {
         return data.states[data.states[i].rank].abbreviation;
-      })
-      .style("fill", function(d, i) {
-        color(data.states[data.states[i].rank]);
       });
 
   states.on("mouseover", function(d, i) {
@@ -79,7 +79,6 @@ d3.json("data/states.json", function(error, data) {
     });
 
     d3.selectAll("circle").transition().style('fill', function(d, i) {
-      console.log(i);
       return colorState(data.states[i], i, false);
     });
 
@@ -99,10 +98,9 @@ d3.json("data/states.json", function(error, data) {
 
   states.on("click", function(d, i) {
     selected = i;
-    d3.select("#trump-poll").text("Trump:  " + data.states[i].trump);
-    d3.select("#clinton-poll").text("Clinton: " + data.states[i].clinton);
-    d3.select("#undecided").text("Undecided: " + data.states[i].undecided);
-
+    d3.select("#trump-poll").text((data.states[i].trump * 100).toFixed(1) + "%");
+    d3.select("#clinton-poll").text((data.states[i].clinton * 100).toFixed(1) + "%");
+    d3.select("#undecided").text((data.states[i].undecided * 100).toFixed(1) + "%");
     d3.select("#electoral-votes").text(data.states[i].votes);
   });
 });

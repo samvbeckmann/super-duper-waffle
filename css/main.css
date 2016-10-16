@@ -143,6 +143,8 @@ svg {
 }
 
 .circle {
+  text-align: right;
+  float: right;
   width: 200px;
   height: 200px;
   border-radius: 200px;
@@ -150,14 +152,28 @@ svg {
   border-width: thick;
   border-color: rgb(100, 190, 122);
   display: block;
-  margin: auto;
+  margin-right: 100px;
+}
+
+#electoral-votes-text {
+  text-align: right;
+  margin-right: 50px;
+}
+
+#polls-text {
+  text-align: left;
+  margin-left: 50px;
 }
 
 .poll {
-  text-align: right;
-  margin-right: 100px;
+  text-align: left;
+  margin-left: 50px;
   font-size: 30px;
   line-height: 50px;
+}
+
+.poll-num {
+  text-align: right;
 }
 
 #electoral-votes {
