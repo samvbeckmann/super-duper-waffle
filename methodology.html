@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head>
+        <link rel="stylesheet" href="css/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,400i|Righteous" rel="stylesheet">
+    </head>
+    <body>
+      <header class="site-header">
+
+      <div class="mini">
+          <h1>Methodology</h1>
+          <h2>Overview</h2>
+            <p>Our calculation of the importance of a vote is simply the product
+                of the two following factors:
+            </p>
+                <ol>
+                    <li>The vote weight: The number of electoral votes per voter</li>
+                    <li>The ambiguity factor:
+                        The probability of the state swinging in the election</li>
+                </ol>
+            <p>
+                This score is then provided as ordinal data, as its actual
+                numeric value has no intrinsic meaning.
+            </p>
+
+          <h2>Calculating Vote Weight</h2>
+            <p>The vote weight calculation is simple: We divide the number of
+                electoral votes in the state by the number of active voters in the
+                state.</p>
+
+            <p>We calculate the number of active voters in the state by using a
+                simple least-squares linear regression model based off of data
+                from the past 5 presidential elections gathered from the <a
+                href="http://www.census.gov/topics/public-sector/voting.html">US
+                Census Bureau</a>.</p>
+
+          <h2>Calculating the Ambiguity Factor</h2>
+            <p>>The ambiguity factor represents the likelihood that a vote will
+                swing in an election. The formula for this calculation is based off
+                of polling data for each state. Where trump refers to the proportion
+                of respondents voting for Donald Trump and clinton refers to the
+                proportion of respondents voting for Hillary Clinton. Finally,
+                undecided refers to the proportion of respondents who had not
+                yet decided for which candidate to cast their votes.</p>
+            <p>|trump - clinton| - undecided</p>
+            <p>These results are then normalized into the range [0.01, 0.99] (as
+                an admission that complete certainty either way is impossible).</p>
+            <p>The polling data used was taken from Huffington Post's
+                <a href="http://elections.huffingtonpost.com/pollster#2016-general-election">
+                Pollster data</a> on October 15, 2016.
+            </p>
+        </div>
+    </body>
+</html>
