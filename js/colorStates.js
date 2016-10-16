@@ -1,8 +1,11 @@
 var map = d3.select(".map");
+
 var states = map.selectAll('path');
 var circles = d3.select(".state-circles")
   .attr("height", 30)
-  .attr("width", 900);
+  .attr("width", 900)
+  .append("g");
+var superCircles = d3.select(".state-circles");
 
 var xCircleOffset = d3.scaleLinear()
   .domain([0, 50])
@@ -16,8 +19,8 @@ d3.json("data/states.json", function(error, data) {
     .domain([0, 1])
     .range(["#e7f2e7", "green"]);
 
-  function colorState(d, hover) {
-    if (d.name === selected) {
+  function colorState(d, i, hover) {
+    if (i === selected) {
       return hover ? d3.rgb(255, 236, 180) : d3.rgb(255, 198, 71);
     } else {
       return color(d.score);
@@ -28,41 +31,77 @@ d3.json("data/states.json", function(error, data) {
     return color(data.states[i].score);
   });
 
-  var circle = circles.selectAll("circle").data(data.states);
+  var circle = circles.selectAll("g").append("g")
+      .data(data.states)
+      .enter();
 
-  circle.enter().append("circle")
+  circle.append("circle")
       .attr("r", 8)
       .attr("cy", 10)
-      .attr("cx", function(d, i) { return xCircleOffset(d.rank); })
-      .style("fill", color(.3));
+      .attr("cx", function(d, i) { return xCircleOffset(data.states[i].rank); })
+      .attr("id", function(d, i) {
+        return data.states[data.states[i].rank].abbreviation;
+      })
+      .style("fill", function(d, i) {
+        color(data.states[data.states[i].rank]);
+      });
 
   states.on("mouseover", function(d, i) {
     var stateUnderMouse = this;
+    var number = i;
     d3.selectAll('path').transition().style('fill', function(d, i) {
-      return (this === stateUnderMouse) ? d3.rgb(255, 198, 71) : colorState(data.states[i], true);
+      return (this === stateUnderMouse) ? d3.rgb(255, 198, 71) : colorState(data.states[i], i, true);
     });
+
     d3.selectAll('circle').transition().style('fill', function(d, i) {
-      return (stateUnderMouse.rank === i) ? d3.rgb(255, 198, 71) : color(.3);
+      if (number === i) {
+        return d3.rgb(255, 198, 71)
+      } else {
+        return colorState(data.states[i], i, true);
+      }
     });
+
     d3.select(".state-name").text(data.states[i].name);
+    d3.select("#electoral-votes").text(data.states[i].votes);
   });
+
+  // circles.on("mouseover", function(d, i) {
+  //   console.log(d);
+  //   var rank = i;
+  //   d3.selectAll('circle').transition().style('fill', function(d, i) {
+  //     return (data.states[i].rank == i) ?  d3.rgb(255, 198, 71) : colorState(data.states[i], true);
+  //   });
+  // });
 
   states.on("mouseout", function() {
     states.transition().style('fill', function(d, i) {
-      return colorState(data.states[i], false);
+      return colorState(data.states[i], i, false);
     });
+
+    circles.transition().style('fill', function(d, i) {
+      return colorState(data.states[i], i, false);
+    });
+
+
     if (selected == null) {
       d3.select(".state-name")
           .text("Select A State")
           .style("color", "grey");
+      d3.select("#electoral-votes").text("/");
     } else {
       d3.select(".state-name")
-          .text(selected)
+          .text(data.states[selected].name)
           .style("color", "black");
+      d3.select("#electoral-votes").text(data.states[selected].votes);
     }
   });
 
   states.on("click", function(d, i) {
-    selected = data.states[i].name;
+    selected = i;
+    d3.select("#trump-poll").text("Trump: " + data.states[i].trump);
+    d3.select("#clinton-poll").text("Clinton: " + data.states[i].clinton);
+    d3.select("#undecided").text("Undecided: " + data.states[i].undecided);
+
+    d3.select("#electoral-votes").text(data.states[i].votes);
   });
 });

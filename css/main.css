@@ -4,6 +4,10 @@
   padding:0;
 }
 
+body {
+  margin-bottom: 100px;
+}
+
 .bar {
   fill: steelblue;
 }
@@ -41,13 +45,23 @@ h2 {
   font-size: 50px;
 }
 
+h3 {
+  font-size: 40px;
+}
+
 h4 {
   font-size: 28px;
+}
+
+h5 {
+  text-align: center;
+  font-size: 20px;
 }
 
 p, ol{
   font-family: 'Merriweather Sans', sans-serif;
   font-size: 20px;
+  text-align: left;
 }
 
 ol {
@@ -94,10 +108,40 @@ svg {
   display: block;
   margin: auto;
   text-align: center;
-  display: block;
-  margin: auto;
 }
 
 .state-data {
   margin-top: 30px;
+}
+
+.row {
+  width: 90%;
+}
+
+.left-data {
+  float:left;
+  width: 45%;
+}
+
+.right-data {
+  float:left;
+  width: 45%;
+  margin-left: 50px;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
+  border-style: solid;
+  border-width: thick;
+  border-color: rgb(100, 190, 122);
+  display: block;
+  margin: auto;
+}
+
+#electoral-votes {
+  font-size: 100px;
+  margin-top: 35px;
+  color: rgb(100, 190, 122);
 }
