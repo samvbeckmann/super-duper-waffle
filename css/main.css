@@ -81,17 +81,13 @@ a {
   padding: 10px;
   border-collapse: collapse;
   margin-bottom: 20px;
+  text-align: right;
 }
 
 .tagline {
   font-style: italic;
   font-size: 28px;
   text-align: center;
-}
-
-div.centered {
-  margin-left: auto;
-  margin-right: auto;
 }
 
 svg {
