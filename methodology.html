@@ -39,7 +39,9 @@
                 simple least-squares linear regression model based off of data
                 from the past 5 presidential elections gathered from the <a
                 href="http://www.census.gov/topics/public-sector/voting.html">US
-                Census Bureau</a>.</p>
+                Census Bureau</a>. Intuitively, the vote weight refers to a
+                general likelihood for your vote to swing the election based
+                solely off of the number of voters in your state.</p>
 
           <h4>Calculating the Ambiguity Factor</h4>
             <p>The ambiguity factor represents the likelihood that a vote will
@@ -51,7 +53,7 @@
                 of respondents who had not yet decided for which candidate
                 to cast their votes.
             </p>
-            <p>|trump - clinton| - undecided</p>
+            <p>1 - (|trump - clinton| - undecided)</p>
             <p>These results are then normalized into the range [0.01, 0.99] (as
                 an admission that complete certainty either way is impossible).
             </p>
