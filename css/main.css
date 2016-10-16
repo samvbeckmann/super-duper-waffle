@@ -91,6 +91,8 @@ a {
 }
 
 svg {
+  display: block;
+  margin: auto;
   text-align: center;
 }
 
