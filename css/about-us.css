@@ -39,6 +39,11 @@ h6 {
   margin-bottom: 15px;
   margin-top: 15px;
   margin-left: 30px;
+  text-align: center;
+}
+
+h6.nocenter  {
+  text-align: left;
 }
 
 h1 {
