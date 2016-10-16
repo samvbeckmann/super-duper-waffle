@@ -17,4 +17,4 @@ def append_data(json_file, new_data):
         target.write(line)
     target.write('    ]\n}')
 
-append_data('data/states.json', 'data/abbreviations.txt')
+append_data('data/states.json', 'data/census_data/Data.txt')
