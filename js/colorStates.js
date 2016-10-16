@@ -78,7 +78,8 @@ d3.json("data/states.json", function(error, data) {
       return colorState(data.states[i], i, false);
     });
 
-    circles.transition().style('fill', function(d, i) {
+    d3.selectAll("circle").transition().style('fill', function(d, i) {
+      console.log(i);
       return colorState(data.states[i], i, false);
     });
 
