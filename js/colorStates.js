@@ -61,7 +61,7 @@ d3.json("data/states.json", function(error, data) {
       }
     });
 
-    d3.select(".state-name").text(data.states[i].name);
+    d3.select(".state-name").text(data.states[i].name).style("color", "black");
     d3.select("#electoral-votes").text(data.states[i].votes);
   });
 
@@ -98,7 +98,7 @@ d3.json("data/states.json", function(error, data) {
 
   states.on("click", function(d, i) {
     selected = i;
-    d3.select("#trump-poll").text("Trump: " + data.states[i].trump);
+    d3.select("#trump-poll").text("Trump:  " + data.states[i].trump);
     d3.select("#clinton-poll").text("Clinton: " + data.states[i].clinton);
     d3.select("#undecided").text("Undecided: " + data.states[i].undecided);
 
