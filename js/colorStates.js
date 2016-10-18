@@ -92,9 +92,9 @@ d3.json("data/states.json", function(error, data) {
           .text("Select A State")
           .style("color", "grey");
       d3.select("#electoral-votes").text("/");
-      d3.select("#trump-poll").text("");
-      d3.select("#clinton-poll").text("");
-      d3.select("#undecided").text("");
+      d3.select("#trump-poll").text("—");
+      d3.select("#clinton-poll").text("—");
+      d3.select("#undecided").text("—");
     } else {
       d3.select(".state-name")
           .text(data.states[selected].name)
