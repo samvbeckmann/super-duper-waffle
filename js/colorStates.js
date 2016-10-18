@@ -112,5 +112,13 @@ d3.json("data/states.json", function(error, data) {
     d3.select("#clinton-poll").text((data.states[i].clinton * 100).toFixed(1) + "%");
     d3.select("#undecided").text((data.states[i].undecided * 100).toFixed(1) + "%");
     d3.select("#electoral-votes").text(data.states[i].votes);
+
+    states.transition().style('fill', function(d, i) {
+      return colorState(data.states[i], i, false);
+    });
+
+    d3.selectAll("circle").transition().style('fill', function(d, i) {
+      return colorState(data.states[i], i, false);
+    });
   });
 });
