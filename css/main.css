@@ -91,7 +91,7 @@ a {
 }
 
 .site-header {
-  background-color: rgb(255, 198, 71);
+  background-color: #ffc647;
   padding: 10px;
   border-collapse: collapse;
   margin-bottom: 20px;
@@ -105,9 +105,31 @@ a {
 }
 
 svg {
-  display: block;
   margin: auto;
   text-align: center;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.svg-container {
+    display: block;
+    margin: auto;
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    vertical-align: top;
+    overflow: hidden;
+}
+
+#map-container {
+  max-height: 500px;
+}
+
+#circles-container {
+  max-height: 20px;
+  margin-bottom: 20px;
 }
 
 .state-data {
@@ -132,7 +154,7 @@ svg {
   float:left;
   width:50%;
   border-right-width: 2px;
-  border-right-color: rgb(120, 120, 120);
+  border-right-color: #787878;
   border-right-style: solid;
 }
 
@@ -150,7 +172,7 @@ svg {
   border-radius: 200px;
   border-style: solid;
   border-width: thick;
-  border-color: rgb(100, 190, 122);
+  border-color: #64be7a;
   display: block;
   margin-right: 100px;
 }
@@ -179,17 +201,17 @@ svg {
 #electoral-votes {
   font-size: 100px;
   margin-top: 35px;
-  color: rgb(100, 190, 122);
+  color: #64be7a;
 }
 
 #trump-poll {
-  color: rgb(254, 85, 85);
+  color: #fe5555;
 }
 
 #clinton-poll {
-  color: rgb(38, 128, 246);
+  color: #2680f6;
 }
 
 #undecided {
-  color: rgb(255, 176, 0);
+  color: #ffb000;
 }
