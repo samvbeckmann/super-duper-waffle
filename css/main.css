@@ -8,25 +8,6 @@ body {
   margin-bottom: 100px;
 }
 
-.bar {
-  fill: steelblue;
-}
-
-.axis text {
-  font: 10px sans-serif;
-}
-
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
-
-.x.axis path {
-  display: none;
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-family: "Righteous" cursive;
   margin-bottom: 15px;
@@ -60,8 +41,16 @@ h5 {
 
 p, ol{
   font-family: 'Merriweather Sans', sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   text-align: left;
+  line-height: 1.5;
+}
+
+pre {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-indent: 20px;
 }
 
 ol {
@@ -90,7 +79,7 @@ a {
   margin: 10px;
 }
 
-.site-header {
+#site-header {
   background-color: #ffc647;
   padding: 10px;
   border-collapse: collapse;
@@ -102,6 +91,7 @@ a {
   font-style: italic;
   font-size: 28px;
   text-align: center;
+
 }
 
 svg {
@@ -124,6 +114,7 @@ svg {
 }
 
 #map-container {
+  margin-top: 20px;
   max-height: 500px;
 }
 
@@ -214,4 +205,49 @@ svg {
 
 #undecided {
   color: #ffb000;
+}
+
+@media (max-width: 800px) {
+  .tagline {
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+
+  #electoral-votes-text {
+    margin-right: 25px;
+  }
+
+  #polls-text {
+    margin-left: 25px;
+  }
+
+  .poll {
+    margin-left: 25px;
+    font-size: 22px;
+    line-height: 35px;
+  }
+
+  .circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    border-width: medium;
+    margin-right: 75px;
+  }
+
+  #electoral-votes {
+    font-size: 50px;
+    margin-top: 19px;
+  }
 }
