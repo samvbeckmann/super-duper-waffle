@@ -34,7 +34,7 @@ d3.json("data/states.json", function(error, data) {
 
   function colorState(d, i, hover) {
     if (i === selected) {
-      return hover ? d3.rgb(255, 236, 180) : d3.rgb(255, 198, 71);
+      return hover ? "#ffecb4" : "#ffc647";
     } else {
       return color(d.score);
     }
@@ -63,11 +63,11 @@ d3.json("data/states.json", function(error, data) {
 
   var mouseover = function(d, number) {
     states.transition().style('fill', function(d, i) {
-      return (number === i) ? d3.rgb(255, 198, 71) : colorState(data.states[i], i, true);
+      return (number === i) ? "#ffc647" : colorState(data.states[i], i, true);
     });
 
     circles.transition().style('fill', function(d, i) {
-      return (number === i) ? d3.rgb(255, 198, 71) : colorState(data.states[i], i, true);
+      return (number === i) ? "#ffc647" : colorState(data.states[i], i, true);
     });
 
     updateText(data.states[number], false);
