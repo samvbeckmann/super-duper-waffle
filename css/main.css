@@ -4,8 +4,12 @@
   padding:0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Righteous" cursive;
+body {
+  margin-top: 0px;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: "Righteous";
   margin-bottom: 15px;
   margin-top: 15px;
 }
@@ -15,6 +19,9 @@ h1, h2, h3 {
 }
 
 h1 {
+  font-family: "Righteous";
+  color: white;
+  margin-top: 0px;
   font-size: 60px;
 }
 
@@ -67,6 +74,13 @@ a {
   font-family: 'Merriweather Sans', sans-serif;
 }
 
+.title {
+  background-color: #FF9F1C;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
 .navigation {
   font-size: 18px;
   text-align: right;
@@ -76,19 +90,19 @@ a {
 }
 
 footer {
-  box-shadow: 0px 500px 0px 500px #02002e;
-  background-color: #02002e;
+  box-shadow: 0px 500px 0px 500px #FFBF69;
+  background-color: #FFBF69;
   padding: 20px;
-  height: 100px;
+  height: 40px;
   border-collapse: collapse;
   margin-top: 50px;
 }
 
 .tagline {
+  margin-top: 20px;
   font-style: italic;
   font-size: 28px;
   text-align: center;
-
 }
 
 svg {
@@ -125,7 +139,7 @@ svg {
 }
 
 .state-name {
-  color: grey;
+  color: #bebebe;
 }
 
 .table {
@@ -160,7 +174,7 @@ svg {
   border-radius: 200px;
   border-style: solid;
   border-width: thick;
-  border-color: #64be7a;
+  border-color: #FF9F1C;
   display: block;
   margin-right: 100px;
 }
@@ -189,7 +203,7 @@ svg {
 #electoral-votes {
   font-size: 100px;
   margin-top: 35px;
-  color: #64be7a;
+  color: #FF9F1C;
 }
 
 #trump-poll {
@@ -201,7 +215,7 @@ svg {
 }
 
 #undecided {
-  color: #ffb000;
+  color: #FF9F1C;
 }
 
 @media (max-width: 800px) {

@@ -10,7 +10,7 @@ function updateText(stateData, considerNull) {
   if (considerNull && selected == null) {
     d3.select(".state-name")
         .text("Select A State")
-        .style("color", "grey");
+        .style("color", "#bebebe");
     d3.select("#electoral-votes").text("/");
     d3.select("#trump-poll").text("—");
     d3.select("#clinton-poll").text("—");
@@ -26,19 +26,19 @@ function updateText(stateData, considerNull) {
   }
 }
 
-d3.json("data/states.json", function(error, data) {
+var color = d3.scaleLinear()
+  .domain([0, 1])
+  .range(["#f6d7ff", "#74018b"]);
 
-  var color = d3.scaleLinear()
-    .domain([0, 1])
-    .range(["#e7f2e7", "green"]);
-
-  function colorState(d, i, hover) {
-    if (i === selected) {
-      return hover ? "#ffecb4" : "#ffc647";
-    } else {
-      return color(d.score);
-    }
+function colorState(d, i, hover) {
+  if (i === selected) {
+    return hover ? "#FFBF69" : "#FF9F1C";
+  } else {
+    return color(d.score);
   }
+}
+
+d3.json("data/states.json", function(error, data) {
 
   states.attr('fill', function(d, i) {
     return color(data.states[i].score);
@@ -63,11 +63,11 @@ d3.json("data/states.json", function(error, data) {
 
   var mouseover = function(d, number) {
     states.transition().style('fill', function(d, i) {
-      return (number === i) ? "#ffc647" : colorState(data.states[i], i, true);
+      return (number === i) ? "#FF9F1C" : colorState(data.states[i], i, true);
     });
 
     circles.transition().style('fill', function(d, i) {
-      return (number === i) ? "#ffc647" : colorState(data.states[i], i, true);
+      return (number === i) ? "#FF9F1C" : colorState(data.states[i], i, true);
     });
 
     updateText(data.states[number], false);
