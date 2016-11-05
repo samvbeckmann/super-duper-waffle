@@ -6,7 +6,7 @@
     <script src="http://d3js.org/d3.v4.min.js"  charset="utf-8"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,400i|Righteous" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Patua+One|Roboto:400,400i" rel="stylesheet">
   </head>
 
   <body>
@@ -78,6 +78,10 @@
     <div class="state-data">
       <h2 class="state-name">Select A State</h2>
       <div id="circles-container">
+        <div class="arrows">
+          <p id="left-arrow">← Less Important</p>
+          <p id="right-arrow">More Important →</p>
+        </div>
         <div class="svg-container" style="padding-bottom: 2%">
           <svg class="state-circles" viewbox="0 0 900 30" preserveAspectRatio="xMidYMid meet"></svg>
         </div>

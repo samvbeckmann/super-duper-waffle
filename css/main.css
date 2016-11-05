@@ -9,9 +9,10 @@ body {
 }
 
 h2, h3, h4, h5, h6 {
-  font-family: "Righteous";
+  font-family: "Patua One";
   margin-bottom: 15px;
   margin-top: 15px;
+  letter-spacing: 1px;
 }
 
 h1, h2, h3 {
@@ -19,10 +20,11 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-family: "Righteous";
+  font-family: "Patua One";
   color: white;
   margin-top: 0px;
   font-size: 60px;
+  letter-spacing: 2px;
 }
 
 h2 {
@@ -50,6 +52,7 @@ p, ol{
 }
 
 pre {
+  font-family: 'Roboto Mono', monospace;
   font-size: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -71,7 +74,7 @@ div.mini
 }
 
 a {
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .title {
@@ -177,6 +180,21 @@ svg {
   border-color: #FF9F1C;
   display: block;
   margin-right: 100px;
+}
+
+.arrows {
+  display: block;
+  margin: auto;
+  width: 80%;
+  max-width: 800px;
+}
+
+#left-arrow {
+  float: left;
+}
+
+#right-arrow {
+  float: right;
 }
 
 #electoral-votes-text {
