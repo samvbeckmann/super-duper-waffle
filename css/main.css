@@ -59,6 +59,15 @@ pre {
   text-indent: 20px;
 }
 
+a {
+  color: #FF9F1C;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 ol {
   list-style-position: inside;
   margin-top: 10px;
